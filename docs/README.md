@@ -59,14 +59,13 @@
 │   ║  🤖 TRADING BOT DOCUMENTATION                                         ║
 │   ╚══════════════════════════════════════════════════════════════════════╝
 │
-├── 📁 Cornixbot_KB/                # Cornix Bot (242 файла)
-│   ├── 📁 account-and-subscription/
-│   ├── 📁 channel-administration/
-│   ├── 📁 backtesting/
-│   └── 📁 errors-notifications/
-│
-└── 📁 cornix/                      # Cornix Integration
+└── 📁 Cornixbot_KB/                # Cornix Bot (242 файла)
+    ├── 📁 account-subscription/
+    ├── 📁 channel-admins/
+    ├── 📁 backtesting/
     ├── 📁 getting-started/
+    ├── 📁 trading-bots/
+    ├── 📁 trading-configurations/
     └── 📁 errors-notifications/
 ```
 
@@ -151,16 +150,13 @@
 ### 🤖 Trading Bot Documentation
 
 #### Cornixbot_KB/
-Документация Cornix trading bot:
+Документация Cornix trading bot (242 файла):
 - Account and subscription management
 - Channel administration
 - Backtesting
-- Error notifications
-
-#### cornix/
-Инструкции по интеграции с Cornix:
 - Getting started guides
-- Error codes and notifications
+- Trading bots & configurations
+- Error notifications
 
 ---
 
