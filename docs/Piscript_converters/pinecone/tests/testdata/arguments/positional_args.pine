@@ -1,0 +1,25 @@
+// Test all positional arguments for plot function
+// plot(series, title, color, linewidth, style, trackprice)
+// Note: plot() now returns void and stores output internally
+
+// Just series (required parameter)
+plot(100.0)
+log.info("Plot 1 created")
+
+// Series and title
+plot(200.0, "My Plot")
+log.info("Plot 2 created")
+
+// Series, title, and color (na)
+plot(300.0, "Colored Plot", na)
+log.info("Plot 3 created")
+
+// Series, title, color, linewidth
+plot(400.0, "Wide Plot", na, 3.0)
+log.info("Plot 4 created")
+
+// Expected output:
+// Plot 1 created
+// Plot 2 created
+// Plot 3 created
+// Plot 4 created

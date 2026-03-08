@@ -1,0 +1,33 @@
+============================================================
+TRADING STRATEGY OPTIMIZATION SUMMARY REPORT
+============================================================
+Generated: 2025-06-19 10:37:25
+
+OVERALL STATISTICS
+------------------------------
+Total Results: 35
+Unique Stocks: 1
+Unique Timeframes: 1
+Profitable Strategies: 15
+Profitability Rate: 42.9%
+Average Profit Factor: 0.77
+Best Profit Factor: 1.82
+Average Win Rate: 6.5%
+Average Max Drawdown: -20.8%
+
+TOP 10 BEST STRATEGIES BY STOCK
+----------------------------------------
+BTCUSDT  | 1h   | PF:   1.82 | WR:  14.3% | DD: -14.5% | Trades:  14
+
+BEST STRATEGIES BY TIMEFRAME
+-----------------------------------
+1h   | BTCUSDT  | PF:   1.82 | WR:  14.3% | DD: -14.5%
+
+RECOMMENDATIONS
+--------------------
+✓ Good overall profitability rate (>30%)
+⚠ Low average profit factor - review strategy logic
+⚠ Low win rate - consider entry/exit criteria
+⚠ High drawdown - review risk management
+
+============================================================

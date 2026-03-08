@@ -1,0 +1,71 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  lint:
+    name: Lint checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - uses: taiki-e/install-action@just
+
+      - name: Run lint checks
+        run: just lint
+        env:
+          RUSTFLAGS: -D warnings
+
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Pull submodules
+        run: |
+          git submodule init
+          git submodule update
+
+      - name: Run tests
+        run: cargo test --lib
+
+  integration-tests:
+    name: Run integration tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Pull submodules
+        run: |
+          git submodule init
+          git submodule update
+
+      - name: Run integration tests
+        run: cargo test -p pine-integration-tests -- --nocapture
+
+  examples:
+    name: Build Examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: extractions/setup-just@v2
+      - name: Compile all examples
+        run: just compile-examples
